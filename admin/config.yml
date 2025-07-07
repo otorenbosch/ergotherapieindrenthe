@@ -1,0 +1,73 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pagina's"
+    files:
+      - label: "Wie zijn wij"
+        name: "wie-zijn-wij"
+        file: "wie-zijn-wij.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Menu", name: "menu", widget: "hidden", default: true}
+          - {label: "Volgorde", name: "order", widget: "hidden", default: 1}
+          - {label: "Inhoud", name: "body", widget: "markdown"}
+      
+      - label: "Deelnemers"
+        name: "deelnemers"
+        file: "deelnemers.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Menu", name: "menu", widget: "hidden", default: true}
+          - {label: "Volgorde", name: "order", widget: "hidden", default: 2}
+          - {label: "Inhoud", name: "body", widget: "markdown"}
+      
+      - label: "Waarom ergotherapie"
+        name: "waarom-ergotherapie"
+        file: "waarom-ergotherapie.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Menu", name: "menu", widget: "hidden", default: true}
+          - {label: "Volgorde", name: "order", widget: "hidden", default: 3}
+          - {label: "Inhoud", name: "body", widget: "markdown"}
+      
+      - label: "Nieuws"
+        name: "nieuws"
+        file: "nieuws.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Menu", name: "menu", widget: "hidden", default: true}
+          - {label: "Volgorde", name: "order", widget: "hidden", default: 4}
+          - {label: "Inhoud", name: "body", widget: "markdown"}
+      
+      - label: "Contact"
+        name: "contact"
+        file: "contact.md"
+        fields:
+          - {label: "Layout", name: "layout", widget: "hidden", default: "page"}
+          - {label: "Titel", name: "title", widget: "string"}
+          - {label: "Menu", name: "menu", widget: "hidden", default: true}
+          - {label: "Volgorde", name: "order", widget: "hidden", default: 5}
+          - {label: "Inhoud", name: "body", widget: "markdown"}
+
+  - name: "deelnemers_collection"
+    label: "Deelnemende praktijken"
+    folder: "_deelnemers"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Praktijknaam", name: "title", widget: "string"}
+      - {label: "Logo", name: "logo", widget: "image", required: false}
+      - {label: "Website", name: "website", widget: "string", required: false}
+      - {label: "Telefoon", name: "telefoon", widget: "string", required: false}
+      - {label: "Adres", name: "adres", widget: "string", required: false}
+      - {label: "Beschrijving", name: "body", widget: "markdown"}
