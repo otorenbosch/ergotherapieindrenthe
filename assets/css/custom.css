@@ -1,0 +1,17 @@
+/* Verwijder social media iconen - specifieke targeting */
+.sidebar-social {
+  display: none !important;
+}
+
+/* Extra backup selectors voor alle gevallen */
+div.sidebar-social,
+.sidebar .sidebar-social,
+.sidebar-social ul,
+.sidebar-social li {
+  display: none !important;
+}
+
+/* Verberg ook de "Social:" label */
+.sidebar-social .sr-only {
+  display: none !important;
+}
